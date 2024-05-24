@@ -37,7 +37,7 @@ func main() {
 	select {
 	case <-done:
 		logger.Info("Task completed gracefully.")
-	case <-time.After(10 * time.Second):
+	case <-time.After(10000 * time.Second):
 		logger.Info("Timeout reached, forcing shutdown.")
 	}
 
